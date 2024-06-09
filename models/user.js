@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const userSchema = new mongoose.Schema({
     name: { type: String, required: true },
     email: { type: String, required: true, unique: true },
-    password: { type: String, required: true, minLength: 3, maxLength: 20 },
+    password: { type: String, required: true, minLength: 3},
     address: { type: Array },
     phone: { type: String, required: true },
     userType: { type: String, required: true, default: "client", enum: ["client", "admin", "vendor", "driver"] },
