@@ -7,7 +7,8 @@ const userSchema = new mongoose.Schema({
     address: { type: Array },
     phone: { type: String, required: true },
     userType: { type: String, required: true, default: "client", enum: ["client", "admin", "vendor", "driver"] },
-    profile: { type: String, default: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fphotos%2Fuser-profile&psig=AOvVaw0jz4d8N_udX9-D-1HS8TaS&ust=1717948762067000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCKCrrIGwzIYDFQAAAAAdAAAAABAE" }
+    profile: { type: String, default: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fphotos%2Fuser-profile&psig=AOvVaw0jz4d8N_udX9-D-1HS8TaS&ust=1717948762067000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCKCrrIGwzIYDFQAAAAAdAAAAABAE" },
+    answer: { type: String, required: [true, "Answer is required"]}
 }, {
     timestamps: true
 });

@@ -4,7 +4,7 @@ const JWT = require('jsonwebtoken')
 //creating the user
 module.exports.register = async (req,res)=>{
     try {
-        const {name, email, password, phone, address} = req.body;
+        const {name, email, password, phone, address, answer} = req.body;
         const user = await User.findOne({email})
     
         if(user){
@@ -22,7 +22,8 @@ module.exports.register = async (req,res)=>{
             email,
             password: hashedPassword,
             address,
-            phone
+            phone,
+            answer
         });
 
         console.log("new user created");
