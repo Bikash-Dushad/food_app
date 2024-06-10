@@ -7,5 +7,6 @@ router.get('/', (req, res) => {
 
 router.use('/api/v1/auth', require('./authRoute'));
 router.use('/api/v1/user', require('./userRoute'));
+router.use("/api/v1/resturant", require('./resturantRoutes'))
 
 module.exports = router;
